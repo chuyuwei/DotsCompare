@@ -307,6 +307,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 916865e8e8267ca48b5ae8e16822143f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  countx: 100
-  county: 100
+  countx: 1
+  county: 1
   prefab: {fileID: 7662107325412513368, guid: a1d22f28534ced54785a3692ea96d46d, type: 3}

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using Unity.Entities;
 using UnityEngine;
+using UnityEngine.Rendering;
 
 // ReSharper disable once InconsistentNaming
 [RequiresEntityConversion]
@@ -21,6 +22,7 @@ public class SpawnerAuthoring_FromEntity : MonoBehaviour, IDeclareReferencedPref
 
     public void Convert(Entity entity, EntityManager dstManager, GameObjectConversionSystem conversionSystem)
     {
+        GraphicsSettings.useScriptableRenderPipelineBatching = true;
         var spawnerData = new Spawner_FromEntity
         {
             // The referenced prefab will be converted due to DeclareReferencedPrefabs.

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Unity.Mathematics;
 using Unity.Transforms;
+using UnityEngine.Rendering;
 
 public class createCube : MonoBehaviour
 {
@@ -12,6 +13,7 @@ public class createCube : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        GraphicsSettings.useScriptableRenderPipelineBatching = true;
         for (int x = 0; x < countx; x++)
             for (int y = 0; y < county; y++)
             {

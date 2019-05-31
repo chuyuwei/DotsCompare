@@ -7,7 +7,7 @@ using Unity.Transforms;
 using Unity.Mathematics;
 using UnityEngine.Jobs;
 using Unity.Burst;
-
+using UnityEngine.Rendering;
 
 public class rotateandcreatejob : MonoBehaviour
 {
@@ -26,6 +26,7 @@ public class rotateandcreatejob : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        GraphicsSettings.useScriptableRenderPipelineBatching = true;
         m_Transforms = new Transform[countx * county];
         for (int x = 0; x < countx; x++)
             for (int y = 0; y < county; y++)
